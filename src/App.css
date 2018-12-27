@@ -1,3 +1,61 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("./fonts/Roboto/Roboto-Light.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+    url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+} */
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Roboto Black"), local("Roboto-Black"),
+    url("./fonts/Roboto/Roboto-Black.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --light: 300;
+  /* --regular: 400; */
+  --black: 900;
+}
+
+html {
+  height: 100%;
+  font-size: 17px;
+}
+
+body {
+  background-color: var(--white, hsl(0, 0%, 100%));
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: var(--light, 300);
+  color: var(--black, hsl(0, 0%, 0%));
+}
+
 .App {
-  font-size: 1em;
+  margin: 50px auto 0 auto;
+  text-align: center;
+}
+
+.App span {
+  display: block;
+  margin-top: 30px;
 }
