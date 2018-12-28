@@ -6,13 +6,13 @@
     url("./fonts/Roboto/Roboto-Light.ttf") format("truetype");
 }
 
-/* @font-face {
+@font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   src: local("Roboto Regular"), local("Roboto-Regular"),
     url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
-} */
+}
 
 @font-face {
   font-family: "Roboto";
@@ -30,32 +30,27 @@
   /* Colors */
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 96%);
+  --yellow: hsl(42, 99%, 48%);
+  --blue: hsl(219, 86%, 57%);
 
   /* Typography */
   --light: 300;
-  /* --regular: 400; */
+  --regular: 400;
   --black: 900;
 }
 
 html {
   height: 100%;
-  font-size: 17px;
+  font-size: calc(16px + (26 - 16) * (100vw - 400px) / (1600 - 400));
+  line-height: 130%;
 }
 
 body {
-  background-color: var(--white, hsl(0, 0%, 100%));
+  background-color: var(--grey, hsl(0, 0%, 96%));
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: var(--light, 300);
   color: var(--black, hsl(0, 0%, 0%));
-}
-
-.App {
-  margin: 50px auto 0 auto;
-  text-align: center;
-}
-
-.App span {
-  display: block;
-  margin-top: 30px;
 }
