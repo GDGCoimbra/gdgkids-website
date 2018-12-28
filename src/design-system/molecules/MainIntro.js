@@ -16,7 +16,8 @@ const MainIntro = styled.div`
     margin: 0;
   }
 
-  button {
+  button,
+  a {
     margin: 30px auto;
   }
 
@@ -39,7 +40,8 @@ const MainIntro = styled.div`
       margin: 0 0 30px 0;
     }
 
-    button {
+    button,
+    a {
       margin: 30px 0 0 0;
     }
   }
