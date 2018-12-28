@@ -18,13 +18,14 @@ const MainMenu = styled.div`
   @media all and (min-width: 768px) {
     grid-column: 1 / span 4;
     grid-row: 2 / -1;
-    flex-direction: row-reverse;
     border-radius: 0;
 
     ul {
       writing-mode: vertical-lr;
       position: absolute;
       bottom: 5vw;
+      display: flex;
+      flex-direction: row-reverse;
       padding: 35px 0;
       transform: rotate(180deg);
       }

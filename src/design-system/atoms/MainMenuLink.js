@@ -30,7 +30,7 @@ const Link = styled.li`
     padding: 0;
 
     &:not(:last-child) {
-      margin: 0 0 35px 0;
+      margin: 35px 0 0 0;
     }
 
     &:before {
