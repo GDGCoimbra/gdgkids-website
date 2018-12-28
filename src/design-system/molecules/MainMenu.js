@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
 import styled from "styled-components";
+import MainMenuLink from "../atoms/MainMenuLink";
 
 const MainMenu = styled.div`
   background-color: var(--yellow, hsl(42, 99%, 48%));
@@ -13,25 +13,6 @@ const MainMenu = styled.div`
     margin: 0;
     padding: 0 0 0 25px;
     list-style: none;
-
-    li {
-      position: relative;
-      display: inline-block;
-
-      &:not(:last-child) {
-        margin-right: 35px;
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: calc(50% - 1px);
-        left: -25px;
-        width: 15px;
-        height: 2px;
-        background-color: #fff;
-      }
-    }
   }
 
   @media all and (min-width: 768px) {
@@ -46,24 +27,6 @@ const MainMenu = styled.div`
       bottom: 5vw;
       padding: 35px 0;
       transform: rotate(180deg);
-
-      li {
-        width: 100%;
-        padding: 0;
-
-        &:not(:last-child) {
-          margin: 0 0 35px 0;
-        }
-
-        &:before {
-          content: "";
-          position: absolute;
-          left: calc(50% - -1px);
-          top: -25px;
-          width: 2px;
-          height: 15px;
-          background-color: #fff;
-        }
       }
     }
   }
@@ -78,18 +41,14 @@ const MainMenu = styled.div`
 `;
 
 export default class extends Component {
-  // static propTypes = {
-  //   src: PropTypes.string,
-  //   alt: PropTypes.string.isRequired
-  // };
-
   render() {
+    const menuLinks = this.props.values.map(value => (
+      <MainMenuLink key={value.id} to={value.to} value={value.name} />
+    ));
+
     return (
       <MainMenu>
-        <ul>
-          <li>Eventos</li>
-          <li>GDG Coimbra</li>
-        </ul>
+        <ul>{menuLinks}</ul>
       </MainMenu>
     );
   }

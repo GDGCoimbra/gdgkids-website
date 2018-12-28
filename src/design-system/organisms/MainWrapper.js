@@ -37,7 +37,7 @@ export default class extends Component {
           <Image src={this.props.logo} alt={this.props.alt} />
         </LogoArea>
 
-        <MainMenu />
+        <MainMenu values={this.props.values} />
         <HeroImage image={this.props.image} />
         <MainIntro>{this.props.children}</MainIntro>
       </MainWrapper>
