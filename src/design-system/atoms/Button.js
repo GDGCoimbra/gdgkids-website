@@ -11,8 +11,8 @@ const Button = styled.button`
   min-width: 200px;
   width: min-content;
   height: var(--height, 70px);
-  padding: 0 50px;
-  font-size: 0.9rem;
+  padding: 10px 50px;
+  font-size: 17px;
   font-weight: var(--regular, 400);
   color: var(--white, hsl(0, 0%, 100%));
   cursor: pointer;
