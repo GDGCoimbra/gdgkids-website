@@ -5,16 +5,17 @@ import styled from "styled-components";
 const Link = styled.li`
   position: relative;
   display: inline-block;
+  padding: 0 0 0 25px;
 
   &:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 15px;
   }
 
   &:before {
     content: "";
     position: absolute;
     top: calc(50% - 1px);
-    left: -25px;
+    left: 0;
     width: 15px;
     height: 2px;
     background-color: #fff;
@@ -26,21 +27,8 @@ const Link = styled.li`
   }
 
   @media all and (min-width: 768px) {
-    width: 100%;
-    padding: 0;
-
     &:not(:last-child) {
-      margin: 35px 0 0 0;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: calc(50% - -1px);
-      top: -25px;
-      width: 2px;
-      height: 15px;
-      background-color: #fff;
+      margin-left: 15px;
     }
   }
 `;
@@ -53,7 +41,7 @@ MainMenuLink.propTypes = {
 function MainMenuLink({ to, value }) {
   return (
     <Link>
-      <a href={to} target="_blank">
+      <a href={to} target="_blank" rel="noopener noreferrer">
         {value}
       </a>
     </Link>
