@@ -1,5 +1,6 @@
 {
   "projects": {
-    "staging": "gdg-kids"
+    "staging": "gdg-kids",
+    "testing-gdg-kids": "gdg-kids"
   }
 }
