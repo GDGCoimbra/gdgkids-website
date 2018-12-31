@@ -6,12 +6,6 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    // const { i18n } = this.props;
-
-    // const changeLanguage = lng => {
-    //   i18n.changeLanguage(lng);
-    // };
-
     return (
       <Router>
         <div>
@@ -23,9 +17,6 @@ class App extends Component {
               component={route.main}
             />
           ))}
-
-          {/* <button onClick={() => changeLanguage("pt")}>pt</button>
-          <button onClick={() => changeLanguage("en")}>en</button> */}
         </div>
       </Router>
     );
