@@ -6,11 +6,11 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    const { i18n } = this.props;
+    // const { i18n } = this.props;
 
-    const changeLanguage = lng => {
-      i18n.changeLanguage(lng);
-    };
+    // const changeLanguage = lng => {
+    //   i18n.changeLanguage(lng);
+    // };
 
     return (
       <Router>
@@ -24,8 +24,8 @@ class App extends Component {
             />
           ))}
 
-          <button onClick={() => changeLanguage("pt")}>pt</button>
-          <button onClick={() => changeLanguage("en")}>en</button>
+          {/* <button onClick={() => changeLanguage("pt")}>pt</button>
+          <button onClick={() => changeLanguage("en")}>en</button> */}
         </div>
       </Router>
     );

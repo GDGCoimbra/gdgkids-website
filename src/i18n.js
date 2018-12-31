@@ -9,7 +9,19 @@ i18n
   .use(reactI18nextModule)
   .init({
     fallbackLng: "pt",
+    load: "languageOnly",
     debug: false,
+    detection: {
+      order: [
+        "querystring",
+        "cookie",
+        "localStorage",
+        "navigator",
+        "htmlTag",
+        "path",
+        "subdomain"
+      ]
+    },
     interpolation: {
       escapeValue: false
     },
