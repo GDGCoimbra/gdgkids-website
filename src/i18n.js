@@ -9,7 +9,7 @@ i18n
   .use(reactI18nextModule)
   .init({
     fallbackLng: "pt",
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false
     },

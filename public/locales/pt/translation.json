@@ -1,3 +1,8 @@
 {
-  "title": "Teste de Título"
+  "menu": {
+    "gdg": "GDG Coimbra",
+    "events": "Eventos"
+  },
+  "title": "Atividades a pensar nos mais pequenos, que pretende mostrar que nunca é cedo demais para aprender como funciona o mundo da tecnologia.",
+  "text": "Mentes mais jovens apreendem muito mais facilmente matérias técnicas e o GDG Kids pretende mostrar que a informática não é nenhum vilão de banda desenhada e que na realidade está mais acessível do que se possa pensar. Temos a certeza que no final das atividades, as crianças se irão sentir verdadeiros heróis!"
 }
