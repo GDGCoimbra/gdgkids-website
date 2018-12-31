@@ -29,7 +29,6 @@ const MainMenu = styled.div`
       flex-direction: row-reverse;
       transform: rotate(-90deg);
       transform-origin: top left;
-      }
     }
   }
 
