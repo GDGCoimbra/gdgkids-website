@@ -8,6 +8,8 @@ i18n
   .use(LanguageDetector)
   .use(reactI18nextModule)
   .init({
+    whitelist: ["en", "pt"],
+    nonExplicitWhitelist: true,
     fallbackLng: "pt",
     load: "languageOnly",
     debug: false,
@@ -20,7 +22,12 @@ i18n
         "htmlTag",
         "path",
         "subdomain"
-      ]
+      ],
+      lookupQuerystring: "lng",
+      lookupCookie: "i18next",
+      lookupLocalStorage: "i18nextLng",
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0
     },
     interpolation: {
       escapeValue: false
