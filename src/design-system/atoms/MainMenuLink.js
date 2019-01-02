@@ -41,7 +41,7 @@ MainMenuLink.propTypes = {
 function MainMenuLink({ to, value }) {
   return (
     <Link>
-      <a href={to} target="_blank" rel="noreferrer">
+      <a href={to} target="_blank" rel="noopener noreferrer">
         {value}
       </a>
     </Link>
