@@ -18,11 +18,11 @@ const Link = styled.li`
     left: 0;
     width: 15px;
     height: 2px;
-    background-color: #fff;
+    background-color: #000000;
   }
 
   a {
-    color: var(--white, hsl(0, 0%, 100%));
+    color: var(--black, hsl(0, 0%, 0%));
     text-decoration: none;
   }
 

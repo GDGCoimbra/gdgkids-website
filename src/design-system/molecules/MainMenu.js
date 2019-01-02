@@ -7,7 +7,6 @@ const MainMenu = styled.div`
   padding: 10px 5vw;
   font-size: 17px;
   font-weight: var(--regular, 400);
-  color: var(--white, hsl(0, 0%, 100%));
 
   ul {
     margin: 0;
@@ -29,7 +28,6 @@ const MainMenu = styled.div`
       flex-direction: row-reverse;
       transform: rotate(-90deg);
       transform-origin: top left;
-      }
     }
   }
 

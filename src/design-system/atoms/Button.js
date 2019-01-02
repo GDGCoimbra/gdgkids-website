@@ -7,7 +7,7 @@ const Button = styled.button`
 
   border: 0;
   border-radius: calc(var(--height, 70px) / 2);
-  background-color: var(--blue, hsl(219, 86%, 57%));
+  background-color: var(--blue, hsl(218, 99%, 39%));
   min-width: 200px;
   width: min-content;
   height: var(--height, 70px);
@@ -19,7 +19,7 @@ const Button = styled.button`
   transition-duration: 0.3s;
 
   &:hover {
-    background-color: hsl(219, 86%, 47%);
+    background-color: hsl(219, 86%, 57%);
   }
 `;
 

@@ -31,8 +31,9 @@
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
   --grey: hsl(0, 0%, 96%);
+  --darkGrey: hsl(0, 0%, 60%);
   --yellow: hsl(42, 99%, 48%);
-  --blue: hsl(219, 86%, 57%);
+  --blue: hsl(218, 99%, 39%);
 
   /* Typography */
   --light: 300;
