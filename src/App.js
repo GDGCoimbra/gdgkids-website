@@ -24,6 +24,7 @@ class App extends Component {
   render() {
     const { i18n } = this.props;
     const activeLanguage = i18n.languages[0];
+
     return (
       <Router>
         <div>
