@@ -5,7 +5,7 @@ import Title from "../design-system/atoms/Title";
 import Paragraph from "../design-system/atoms/Paragraph";
 import Link from "../design-system/atoms/Link";
 import logo from "../images/gdgkids-logo.svg";
-import image from "../images/jelleke-vanooteghem-554406-unsplash.jpg";
+import image from "../images/mindstorms.jpg";
 
 function Home({ t }) {
   const menuLinks = [
@@ -28,6 +28,7 @@ function Home({ t }) {
       <Link
         to="https://github.us13.list-manage.com/subscribe?u=3f81ad81416bca071bb4b2eab&id=3f860243bf"
         target="_blank"
+        rel="noreferrer"
         value="Newsletter"
       />
     </MainWrapper>

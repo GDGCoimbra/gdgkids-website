@@ -35,7 +35,11 @@ export default class extends Component {
 
   render() {
     return (
-      <Link href={this.props.to} target={this.props.target}>
+      <Link
+        href={this.props.to}
+        target={this.props.target}
+        rel={this.props.rel}
+      >
         {this.props.value}
       </Link>
     );
