@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import { withNamespaces } from "react-i18next";
 import styled from "styled-components";
+import LanguageSelector from "../atoms/LanguageSelector";
 import Image from "../atoms/Image";
 import HeroImage from "../atoms/HeroImage";
 import MainMenu from "../molecules/MainMenu";
 import MainIntro from "../molecules/MainIntro";
 
-const MainWrapper = styled.div`
+const Wrapper = styled.div`
   @media all and (min-width: 768px) {
     height: 100vh;
     display: grid;
@@ -17,7 +19,12 @@ const MainWrapper = styled.div`
 const LogoArea = styled.div`
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   padding: 5vw;
+  z-index: 2;
 
   img {
     width: auto;
@@ -29,18 +36,43 @@ const LogoArea = styled.div`
   }
 `;
 
-export default class extends Component {
+class MainWrapper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+    const { i18n } = this.props;
+    const changeLanguage = lng => {
+      i18n.changeLanguage(lng);
+    };
+
+    changeLanguage(event.target.value);
+  }
+
   render() {
+    const { i18n } = this.props;
+    const activeLanguage = i18n.languages[0];
+
     return (
-      <MainWrapper>
+      <Wrapper>
         <LogoArea>
           <Image src={this.props.logo} alt={this.props.alt} />
+          <LanguageSelector
+            value={activeLanguage}
+            onChange={this.handleChange}
+          />
         </LogoArea>
 
         <MainMenu values={this.props.values} />
         <HeroImage image={this.props.image} />
         <MainIntro>{this.props.children}</MainIntro>
-      </MainWrapper>
+      </Wrapper>
     );
   }
 }
+
+export default withNamespaces("translation")(MainWrapper);

@@ -10,7 +10,7 @@ i18n
   .init({
     whitelist: ["en", "pt"],
     nonExplicitWhitelist: true,
-    fallbackLng: "pt",
+    fallbackLng: "en",
     load: "languageOnly",
     debug: false,
     detection: {
