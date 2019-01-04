@@ -4,8 +4,8 @@ import styled from "styled-components";
 import LanguageSelector from "../atoms/LanguageSelector";
 import Image from "../atoms/Image";
 import HeroImage from "../atoms/HeroImage";
-import MainMenu from "../molecules/MainMenu";
-import MainIntro from "../molecules/MainIntro";
+import LandingMenu from "../molecules/LandingMenu";
+import LandingIntro from "../molecules/LandingIntro";
 
 const Wrapper = styled.div`
   @media all and (min-width: 768px) {
@@ -67,9 +67,9 @@ class MainWrapper extends Component {
           />
         </LogoArea>
 
-        <MainMenu values={this.props.values} />
+        <LandingMenu values={this.props.values} />
         <HeroImage image={this.props.image} />
-        <MainIntro>{this.props.children}</MainIntro>
+        <LandingIntro>{this.props.children}</LandingIntro>
       </Wrapper>
     );
   }

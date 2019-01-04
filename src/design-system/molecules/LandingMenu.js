@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import MainMenuLink from "../atoms/MainMenuLink";
+import LandingMenuLink from "../atoms/LandingMenuLink";
 
 const MainMenu = styled.div`
   background-color: var(--yellow, hsl(42, 99%, 48%));
@@ -42,7 +42,7 @@ const MainMenu = styled.div`
 export default class extends Component {
   render() {
     const menuLinks = this.props.values.map(value => (
-      <MainMenuLink key={value.id} to={value.to} value={value.name} />
+      <LandingMenuLink key={value.id} to={value.to} value={value.name} />
     ));
 
     return (
