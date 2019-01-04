@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Image from "../atoms/Image";
-import Title from "../atoms/Title";
-
+// import Title from "../atoms/Title";
 import logo from "../../images/gdgkids-logo.svg";
+// const test = require("../../utils/testMD.md");
+
+// const ReactDOM = require("react-dom");
+import ReactMarkdown from "react-markdown";
+import termsFrPath from "../../utils/testMD.md";
+// const input = test;
 
 const ActivitiesWrapper = styled.div`
   height: 100vh;
@@ -125,6 +130,19 @@ const ActivityContent = styled.div`
 `;
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { terms: null };
+  }
+
+  componentWillMount() {
+    fetch(termsFrPath)
+      .then(response => response.text())
+      .then(text => {
+        this.setState({ terms: text });
+      });
+  }
+
   render() {
     return (
       <ActivitiesWrapper>
@@ -155,8 +173,8 @@ export default class extends Component {
         <Content>
           <ActivityInfo>Info</ActivityInfo>
           <ActivityContent>
-            <Title value="Commodo in est vitae" />
-            <p>
+            {/* <Title value="Commodo in est vitae" /> */}
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -164,7 +182,8 @@ export default class extends Component {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            </p> */}
+            <ReactMarkdown source={this.state.terms} />
           </ActivityContent>
         </Content>
       </ActivitiesWrapper>
