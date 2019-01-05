@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ActivitiesWrapper from "./design-system/organisms/ActivitiesWrapper";
 import ActivitiesMenu from "./design-system/organisms/ActivitiesMenu";
-import ActivitiesContent from "./design-system/organisms/ActivitiesContent";
+import ActivityContent from "./design-system/organisms/ActivityContent";
 import Routes from "./Routes";
 import menuLinks from "./utils/menuLinks";
 import "./App.css";
@@ -18,7 +18,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <ActivitiesWrapper>
               <ActivitiesMenu values={menuLinks} />
-              <ActivitiesContent>
+              <ActivityContent>
                 {Routes.map((route, index) => (
                   <Route
                     key={index}
@@ -27,7 +27,7 @@ class App extends Component {
                     component={route.content}
                   />
                 ))}{" "}
-              </ActivitiesContent>
+              </ActivityContent>
             </ActivitiesWrapper>
           </Switch>
         </div>
