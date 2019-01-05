@@ -5,9 +5,10 @@ import styled from "styled-components";
 
 const MenuItem = styled.li`
   position: relative;
+  padding-left: 1vw;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: calc(2vw + 15px);
   }
 
   a {
@@ -18,7 +19,7 @@ const MenuItem = styled.li`
 
     & + span {
       display: none;
-      margin-top: 30px;
+      margin-top: 15px;
       max-width: 300px;
       font-size: 0.8rem;
       font-weight: var(--light, 300);
@@ -33,11 +34,11 @@ const MenuItem = styled.li`
 
     &:before {
       position: absolute;
-      top: 10px;
+      top: 12px;
       left: -2vw;
       background-color: var(--blue, hsl(218, 99%, 39%));
-      width: 20px;
-      height: 10px;
+      width: 2vw;
+      height: 8px;
       content: "";
     }
   }

@@ -7,7 +7,7 @@ import logo from "../../images/gdgkids-logo.svg";
 
 const Menu = styled.div`
   background-color: var(--white, hsl(0, 0%, 0%));
-  padding: 2vw 5vw 2vw 2vw;
+  padding: 2vw;
 
   img {
     margin-bottom: 5vw;
