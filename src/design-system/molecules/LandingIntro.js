@@ -6,7 +6,6 @@ const MainIntro = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 5vw;
-  overflow-y: scroll;
 
   h1 {
     margin: 30px 0;
@@ -21,8 +20,12 @@ const MainIntro = styled.div`
     margin: 30px auto;
   }
 
+  @media all and (max-height: 767px) and (min-width: 768px) {
+    padding: 25vh 5vw 0 5vw;
+  }
+
   @media all and (max-height: 767px) {
-    display: initial;
+    display: inherit;
 
     &:after {
       content: "";
@@ -35,6 +38,7 @@ const MainIntro = styled.div`
   @media all and (min-width: 768px) {
     grid-column: 7 / 13;
     grid-row: 1 / -1;
+    overflow-y: scroll;
 
     h1 {
       margin: 0 0 30px 0;
